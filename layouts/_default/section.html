@@ -16,30 +16,30 @@
         {{ range .Pages }}
         {{if (.Params.external_url)}}
         <a href="{{.Params.external_url}}" class="a-block" target="_blank">
-        {{else}}
-        <a href="{{ .RelPermalink }}" class="a-block">
-        {{end}}
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div width="100%" class="section-item-grid" style="overflow: hidden;">
-                            <div class="post-item-title" >
-                                {{.Title}}
+            {{else}}
+            <a href="{{ .RelPermalink }}" class="a-block">
+                {{end}}
+                <div class="post-item-wrapper">
+                    <div class="post-item post-item-no-gaps">
+                        <div class="post-item-info-wrapper">
+                            <div width="100%" class="section-item-grid" style="overflow: hidden;">
+                                <div class="post-item-title">
+                                    {{.Title}}
+                                </div>
+                                {{if .Params.thumbnail_image}}
+                                <div class="post-item-title" style="max-height: 200px; overflow: hidden;">
+                                    <img src={{.Params.thumbnail_image | absURL}}/>
+                                </div>
+                                {{end}}
                             </div>
-                            {{if .Params.thumbnail_image}}
-                            <div class="post-item-title" style="max-height: 200px; overflow: hidden;">
-                                <img src={{.Params.thumbnail_image}}/>
-                            </div>
-                            {{end}}
-                        </div>
 
-                        {{ partial "post-item-meta.html" . }}
+                            {{ partial "post-item-meta.html" . }}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-        {{ end }}
-        {{ end }}
+            </a>
+            {{ end }}
+            {{ end }}
     </div>
 </div>
 
