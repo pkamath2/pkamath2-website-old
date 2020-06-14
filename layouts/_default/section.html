@@ -27,8 +27,8 @@
                                     {{.Title}}
                                 </div>
                                 {{if .Params.thumbnail_image}}
-                                <div class="post-item-title" style="max-height: 200px; overflow: hidden;">
-                                    <img src={{.Params.thumbnail_image | absURL}}/>
+                                <div class="post-item-title" 
+                                    style="height: 140px; width: 350px; background-image: url('{{.Params.thumbnail_image | absURL}}')"/>
                                 </div>
                                 {{end}}
                             </div>
