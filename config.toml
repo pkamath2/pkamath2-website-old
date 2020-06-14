@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "http://purnimakamath.com/"
 languageCode = "en-us"
-title = "On a Full Moon..."
+title = "Purnima's blog"
 theme = "diary"
 
 [markup]
@@ -16,9 +16,10 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Purnima's blog"
+subtitle = "Always a work in progress..."
 enableGitalk = false
 enableReadingTime = false
+disableToC = true
 
 [taxonomies]
    tag = "tags"
