@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        {{ range .Paginator.Pages.GroupByDate "2006" }}
+        <a class="a-block">
+            <div class="post-item-wrapper post-item-wrapper-no-hover">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title post-item-title-small year">
+                            {{ .Key }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{ range .Pages }}
+        {{if (.Params.external_url)}}
+        <a href="{{.Params.external_url}}" class="a-block" target="_blank">
+        {{else}}
+        <a href="{{ .RelPermalink }}" class="a-block">
+        {{end}}
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div width="100%" class="section-item-grid" style="overflow: hidden;">
+                            <div class="post-item-title" >
+                                {{.Title}}
+                            </div>
+                            {{if .Params.thumbnail_image}}
+                            <div class="post-item-title" style="max-height: 200px; overflow: hidden;">
+                                <img src={{.Params.thumbnail_image}}/>
+                            </div>
+                            {{end}}
+                        </div>
+
+                        {{ partial "post-item-meta.html" . }}
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}
