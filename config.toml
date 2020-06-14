@@ -1,4 +1,4 @@
-baseURL = "http://purnimakamath.com/"
+baseURL = "http://purnimakamath.com"
 languageCode = "en-us"
 title = "Purnima's blog"
 theme = "diary"
@@ -45,3 +45,28 @@ weight = 3
 url = "/"
 name = "About"
 weight = 1
+
+[deployment]
+order = [".jpg$", ".gif$"]
+
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "purnimakamath.com"
+
+URL = "s3://purnimakamath.com?region=ap-southeast-1"
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
