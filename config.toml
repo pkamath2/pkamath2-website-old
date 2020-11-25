@@ -26,23 +26,23 @@ disableToC = true
    category = "categories"
 
 [[menu.main]]
-url = "/gen-art"
+url = "/gen-art/index.html"
 name = "Generative Art"
 weight = 4
 [[menu.main]]
-url = "/paintings"
+url = "/paintings/index.html"
 name = "Paintings"
 weight = 5
 [[menu.main]]
-url = "/blog"
+url = "/blog/index.html"
 name = "Blog"
 weight = 2
 [[menu.main]]
-url = "/talks"
+url = "/talks/index.html"
 name = "Talks"
 weight = 3
 [[menu.main]]
-url = "/about/me"
+url = "/about/me/index.html"
 name = "About"
 weight = 1
 

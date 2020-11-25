@@ -75,8 +75,8 @@
                 </div>
             </div>
             
-               
-            <!--<nav class="post-pagination">
+            
+            <nav class="post-pagination">
                 {{if .Prev}}
                 <a class="older-posts" href="{{.Prev.Permalink}}">
 			{{ i18n "prev_link" }}<br>{{.Prev.Title}}
@@ -86,6 +86,7 @@
 			{{ i18n "prev_link" }}<br>{{ i18n "no_older_posts" }}
                 </a>
                 {{end}}
+
                 {{if .Next}}
                 <a class="newer-posts" href="{{.Next.Permalink}}">
 			{{ i18n "next_link" }}<br>{{.Next.Title}}
@@ -95,7 +96,7 @@
 			{{ i18n "next_link" }}<br>{{ i18n "no_newer_posts"}}
                 </a>
                 {{end}}
-            </nav>-->
+            </nav>
             <div class="post-comment-wrapper">
                 {{ if eq .Params.comment false }}
                 <p style="opacity: 0.6" align="center">
