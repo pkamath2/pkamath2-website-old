@@ -1,4 +1,4 @@
-baseURL = "http://purnimakamath.com"
+baseURL = "https://purnimakamath.com"
 languageCode = "en-us"
 title = "Purnima's blog"
 theme = "diary"
@@ -42,7 +42,7 @@ url = "/talks"
 name = "Talks"
 weight = 3
 [[menu.main]]
-url = "/"
+url = "/about/me"
 name = "About"
 weight = 1
 
